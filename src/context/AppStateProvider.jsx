@@ -1,9 +1,10 @@
 /* eslint-disable react/prop-types */
-import { createContext, useState } from "react";
+import { createContext } from "react";
 import pokemonImg from "../assets/pokemon.png"
 import tictacImg from "../assets/tictac.png"
 import wordleImg from "../assets/wordle.png"
 import youtubeImg from "../assets/youtube.png"
+import useLocalStorage from "../hooks/useLocalStorage";
 
 
 const appData = [
@@ -45,7 +46,7 @@ export const AppStateContext = createContext()
 
 function AppStateProvider ({children}){
 
-    const [currentApp, setCurrentApp] = useState("")
+    const [currentApp, setCurrentApp] = useLocalStorage("currentAPP", "")
     
     return (
         <AppStateContext.Provider value={{ appData, currentApp, setCurrentApp }}>
