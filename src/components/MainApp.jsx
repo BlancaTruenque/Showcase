@@ -4,6 +4,7 @@ import { AppStateContext } from "../context/AppStateProvider"
 import Welcome from "./welcomePokemon/Welcome"
 import TicTacToe from "./TicTacToe"
 import MainView from "./MainView"
+import VideoFeed from "./VideoFeed"
 
 
 function MainApp() {
@@ -13,10 +14,10 @@ function MainApp() {
     return (<>
         <main className="flex-grow bg-[#F8FAFC]">
             {currentApp === "" && <MainView />}
-            {currentApp === "tictac" && <TicTacToe/>}
+            {currentApp === "tictac" && <TicTacToe />}
             {currentApp === "pokemon" && <Welcome />}
-            {currentApp === "wordle" && <h1>Wordle APP</h1>}
-            {currentApp === "video" && <h1>Video APP</h1>}
+            {currentApp === "wordle" && <h1>Wordle</h1>}
+            {currentApp === "video" && <VideoFeed/>}
         </main>
     </>)
 }
