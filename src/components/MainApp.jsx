@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useContext } from "react"
 import { AppStateContext } from "../context/AppStateProvider"
+import Welcome from "./welcomePokemon/Welcome"
 
 function MainView() {
 
@@ -41,6 +42,8 @@ function MainApp() {
             {currentApp === "pokemon" && <h1>pokemonAPP</h1>}
             {currentApp === "wordle" && <h1>Wordle APP</h1>}
             {currentApp === "video" && <h1>Video APP</h1>}
+
+            <Welcome />
         </main>
     </>)
 }
