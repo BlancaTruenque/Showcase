@@ -1,9 +1,12 @@
+import styles from "./contenedorPokemon.module.css"
+
+
 
 const ContenedorPokemon = () => {
   return (
-    <div>
+    <div className={styles.div}>
        
-        </div>
+   </div>
 
       
 

@@ -1,12 +1,15 @@
-import { useState } from "react";
 import styles from "./welcome.module.css"
+import useLocalStorage from "../../../hooks/useLocalStorage";
+import { useState } from "react";
 
 const Welcome = () => {
-  const [username, setUsername] = useState("");
-
-  function handleClick() {
-    console.log(username);
-    localStorage.setItem("username", username);
+  const [curretnUsername, setCurrentUsername] = useLocalStorage("usurname", "")
+  const [isAcctive, setIsActive] = useState(false)
+ 
+  function startSession (){
+    if(curretnUsername){
+      setIsActive(true)
+    }console.log(isAcctive)
   }
 
   return (
@@ -27,12 +30,13 @@ const Welcome = () => {
                 name="username"
                 id="username"
                 placeholder="username"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
+                value={curretnUsername}
+                onChange={(e) => setCurrentUsername(e.target.value) }
               />
-              <button  className={styles.button} onClick={handleClick}>
+              <button  className={styles.button} onClick={startSession} >
                 Enter
               </button>
+              {isAcctive&& <ContenedorPokemon />}
             </div>
             <div>
             </div>

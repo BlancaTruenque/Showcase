@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
 import { useContext } from "react"
 import { AppStateContext } from "../context/AppStateProvider"
-import Welcome from "./welcomePokemon/Welcome"
 import TicTacToe from "./TicTacToe"
 import MainView from "./MainView"
+import AppPokemon from "./AppPokemon/AppPokemon"
 
 
 function MainApp() {
@@ -14,7 +14,7 @@ function MainApp() {
         <main className="flex-grow bg-[#F8FAFC]">
             {currentApp === "" && <MainView />}
             {currentApp === "tictac" && <TicTacToe/>}
-            {currentApp === "pokemon" && <Welcome />}
+            {currentApp === "pokemon" && <AppPokemon/>}
             {currentApp === "wordle" && <h1>Wordle APP</h1>}
             {currentApp === "video" && <h1>Video APP</h1>}
         </main>
