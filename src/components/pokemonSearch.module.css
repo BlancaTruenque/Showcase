@@ -98,7 +98,7 @@ bottom: 0%; */
 }
 
 .type button p {
-  width: 32px;
+  /* width: 32px; */
   font-family: sans-serif;
   font-style: normal;
   font-weight: 700;
