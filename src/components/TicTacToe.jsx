@@ -7,7 +7,7 @@ function TicTacToe() {
 
     return (<>
         <TicTacProvider>
-            <div className="flex mt-10 justify-center gap-4">
+            <div className="w-[calc(85vw)] bg-white rounded-2xl shadow-xl py-20 mx-auto flex mt-10 justify-center gap-4">
                 <Square/>
                 <History/>
             </div>
