@@ -45,7 +45,7 @@ function PokemonSearch() {
     };
 
     fetch(
-      `https://poke-collection-lite-production.up.railway.app/api/blancatest/favorites`,
+      `https://poke-collection-lite-production.up.railway.app/api/${userName}/favorites`,
       options
     )
       .then((response) => response.json())
