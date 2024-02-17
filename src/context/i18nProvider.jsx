@@ -1,13 +1,14 @@
 /* eslint-disable react/prop-types */
-import { createContext, useState } from "react";
+import { createContext } from "react";
 import en from "../locales/en.json"
 import es from "../locales/es.json"
+import useLocalStorage from "../hooks/useLocalStorage";
 
 export const I18nContext = createContext()
 
 function I18NProvider({ children }) {
 
-    const [lang, setLang] = useState("US") // alternative value "ES"
+    const [lang, setLang] = useLocalStorage("Lang", "US") // alternative value "ES"
 
     function setLanguage(lang) {
         setLang(lang)
