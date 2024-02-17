@@ -11,7 +11,7 @@ const ContenedorPokemon = () => {
   return <>
 
     {isActive ?
-      <div className="flex justify-center flex-wrap md:flex-nowrap lg:w-[calc(80vw)] px-4 mx-auto mt-10">
+      <div className="flex justify-center flex-wrap md:flex-nowrap lg:w-[calc(75vw)] px-4 mx-auto mt-10">
         <PokemonSearch />
         <Favorites />
       </div>

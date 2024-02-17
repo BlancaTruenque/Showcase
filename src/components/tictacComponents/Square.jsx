@@ -6,7 +6,7 @@ import calculateWinner from "../../utils/calculateWinner"
 
 function SquareElement({ handlePlay, value, winpos, id }) {
     return (<div onClick={handlePlay} className="border w-20 h-20 flex justify-center items-center">
-        <p className={`${winpos.includes(id) && 'text-green-600'} text-4xl font-extrabold`}>
+        <p className={`${winpos.includes(id) && 'text-green-600'} text-4xl font-extrabold font-rubik-mono-one`}>
             {value}
         </p>
     </div>)

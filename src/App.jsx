@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <AppStateProvider>
-        <div className="flex flex-col min-h-screen">
+        <div className="flex flex-col min-h-screen font-nunito">
           <Header />
           <MainApp />
           <Footer />

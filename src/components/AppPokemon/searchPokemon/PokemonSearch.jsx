@@ -3,6 +3,8 @@ import styles from "./pokemonSearch.module.css";
 import TypeColor from "../typeColor/TypeColor";
 import { AppPokeContext } from "../../../context/AppPokemonProvider";
 import { I18nContext } from "../../../context/i18nProvider";
+import StartOutline from "../../../assets/icons/vector.svg"
+import StartFill from "../../../assets/icons/star-fill.svg"
 
 function PokemonSearch() {
   const [pokemon, setPokemon] = useState();
@@ -113,12 +115,12 @@ function PokemonSearch() {
             </section>
             {favoritePoke.find((poke) => poke.id === pokemon.id) ? (
               <section className={styles.AddFavorites}>
-                <img src="/src/assets/icons/vector.svg" alt="vector" />
+                <img src={StartFill} alt="vector" />
                 <button onClick={deleteFavorites}>{t("del-pokemon")}</button>
               </section>
             ) : (
               <section className={styles.AddFavorites}>
-                <img src="/src/assets/icons/vector.svg" alt="vector" />
+                <img src={StartOutline} alt="vector" />
                 <button onClick={addFavorites}>{t("add-pokemon")}</button>
               </section>
             )}

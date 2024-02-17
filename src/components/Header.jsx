@@ -11,8 +11,8 @@ function Header() {
 
     return (<>
         <header className="bg-[#EFF4FF]">
-            <nav className="flex items-center py-5 px-2 max-w-screen-xl mx-auto justify-between relative">
-                <h1 onClick={() => setCurrentApp("")} className="text-2xl md:text-4xl font-semibold">
+            <nav className="flex items-center py-5 px-8 max-w-screen-xl mx-auto justify-between relative">
+                <h1 onClick={() => setCurrentApp("")} className="text-2xl md:text-3xl font-bold">
                     React Showcase
                 </h1>
                 <h2 className="hidden md:block absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">

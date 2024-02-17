@@ -24,10 +24,12 @@ function Video({ url }) {
 
     return (
         <div>
-            <ReactPlayer url={url}
-                playing={playing}
-                playbackRate={playbackRate}
-                controls={false} />
+            <div className="w-[calc(80vw)] overflow-hidden">
+                <ReactPlayer url={url}
+                    playing={playing}
+                    playbackRate={playbackRate}
+                    controls={false} />
+            </div>
             <div className="w-full flex justify-between p-2 bg-[#EFF4FF]">
                 <button
                     className={`${playing ? 'bg-white text-blue-500' : 'bg-blue-500 text-white'} outline py-2 px-4 rounded-lg `}

@@ -45,11 +45,11 @@
   border-radius: 16px;
 }
 .containerPokemon h1 {
-  font-family: sans-serif;
+  font-family: var(--nunito);
   font-size: 24px;
   font-weight: 700;
   line-height: 32px;
-
+  text-transform: capitalize;
   text-align: center;
 }
 .containerPokemon p {
@@ -164,7 +164,7 @@
 
 .AddFavorites button{
 height: 24px;
-font-family: sans-serif;
+font-family: var(--nunito);
 font-style: normal;
 font-weight: 700;
 font-size: 14px;
