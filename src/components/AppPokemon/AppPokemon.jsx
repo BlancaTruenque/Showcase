@@ -1,14 +1,14 @@
-import ContenedorPokemon from "./contenedorPokemon/ContenedorPokemon"
-import Welcome from "./welcomePokemon/Welcome"
+import AppPokemonProvider from "../../context/AppPokemonProvider"
+import ContenedorPokemon from "./contenedorPokemon"
 
-const AppPokemon = () => {
-
+const AppPokemon = () =>{
   return (
     <>
-    <Welcome />
-    <ContenedorPokemon />
+    <AppPokemonProvider >
+    <ContenedorPokemon />  
+    </AppPokemonProvider>
     </>
   )
-}
+  }
 
 export default AppPokemon

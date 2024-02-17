@@ -1,9 +1,13 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import styles from "./pokemonSearch.module.css";
-import TypeColor from "./TypeColor";
+import TypeColor from "../typeColor/TypeColor";
+import { AppPokeContext } from "../../../context/AppPokemonProvider";
+
 function PokemonSearch() {
   const [pokemon, setPokemon] = useState();
   const [name, setName] = useState("");
+  const { currentUsername, resetData, favoritePoke } =
+    useContext(AppPokeContext);
 
   function addName(event) {
     setName(event.target.value);
@@ -45,11 +49,23 @@ function PokemonSearch() {
     };
 
     fetch(
-      `https://poke-collection-lite-production.up.railway.app/api/${userName}/favorites`,
+      `https://poke-collection-lite-production.up.railway.app/api/${currentUsername}/favorites`,
       options
     )
       .then((response) => response.json())
-      .then((response) => console.log(response))
+      .then((response) => resetData())
+      .catch((err) => console.error(err));
+  }
+  function deleteFavorites() {
+    const options = {
+      method: "DELETE",
+    };
+
+    fetch(
+      `https://poke-collection-lite-production.up.railway.app/api/${currentUsername}/favorites/${pokemon.id}`,
+      options
+    )
+      .then((response) => resetData())
       .catch((err) => console.error(err));
   }
 
@@ -73,8 +89,8 @@ function PokemonSearch() {
                 <img src={pokemon.urlImg} alt="pokemonElegido" />
               </div>
               <div className={styles.type}>
-                {pokemon.types.map((item) => {
-                  return <TypeColor type={item} />;
+                {pokemon.types.map((item, index) => {
+                  return <TypeColor key={`Type-${index}`} type={item} />;
                 })}
               </div>
               <div className={styles.measures}>
@@ -94,10 +110,17 @@ function PokemonSearch() {
                 </div>
               </div>
             </section>
-            <section className={styles.AddFavorites}>
-              <img src="/src/assets/icons/vector.svg" alt="vector" />
-              <button onClick={addFavorites}>Add to Favorites</button>
-            </section>
+            {favoritePoke.find((poke) => poke.id === pokemon.id) ? (
+              <section className={styles.AddFavorites}>
+                <img src="/src/assets/icons/vector.svg" alt="vector" />
+                <button onClick={deleteFavorites}>Remove From Favorite</button>
+              </section>
+            ) : (
+              <section className={styles.AddFavorites}>
+                <img src="/src/assets/icons/vector.svg" alt="vector" />
+                <button onClick={addFavorites}>Add to Favorites</button>
+              </section>
+            )}
           </>
         )}
       </div>

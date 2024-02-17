@@ -5,8 +5,6 @@ import TicTacToe from "./TicTacToe"
 import MainView from "./MainView"
 import VideoFeed from "./VideoFeed"
 import AppPokemon from "./AppPokemon/AppPokemon"
-import Favorites from "./Favorites";
-import PokemonSearch from "./PokemonSearch";
 
 
 function MainApp() {
@@ -19,10 +17,7 @@ function MainApp() {
             {currentApp === "tictac" && <TicTacToe />}
             {currentApp === "wordle" && <h1>Wordle</h1>}
             {currentApp === "video" && <VideoFeed/>}
-            {currentApp === "pokemon" && <div className="flex , gap-4">
-        <PokemonSearch />
-        <Favorites />
-      </div>}
+            {currentApp === "pokemon" && <AppPokemon />}
         </main>
     </>)
 }
