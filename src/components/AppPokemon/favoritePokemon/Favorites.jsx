@@ -5,7 +5,7 @@ import TypeColor from "../typeColor";
 
 
 function Favorites() {
-  const {setCurrentUsername, favoritePoke}= useContext(AppPokeContext)
+  const {setCurrentUsername, favoritePoke, clearData}= useContext(AppPokeContext)
   
 
 
@@ -28,6 +28,8 @@ function Favorites() {
         }
 
       </div>
+      <button className={styles.exit} onClick={()=>clearData()}>Borrar Pokemons</button>
+
       <button className={styles.exit} onClick={()=>setCurrentUsername("")}>Exit</button>
     </div>
   );
