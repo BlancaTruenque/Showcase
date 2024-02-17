@@ -54,7 +54,7 @@ function PokemonSearch() {
       options
     )
       .then((response) => response.json())
-      .then((response) => resetData())
+      .then(() => resetData())
       .catch((err) => console.error(err));
   }
   function deleteFavorites() {
@@ -66,7 +66,7 @@ function PokemonSearch() {
       `https://poke-collection-lite-production.up.railway.app/api/${currentUsername}/favorites/${pokemon.id}`,
       options
     )
-      .then((response) => resetData())
+      .then(() => resetData())
       .catch((err) => console.error(err));
   }
 
