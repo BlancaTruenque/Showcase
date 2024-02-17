@@ -1,0 +1,20 @@
+{
+  "next-player": "Siguiente jugador",
+  "move-0": "Inicio del Juego",
+  "move": "Movimiento",
+  "reset-button": "Reiniciar",
+  "won-game": "Ganador",
+  "go-to": "Ir a:",
+  "tied-game": "Juego Empatado",
+  "paolo": "Paolo ES",
+  "rosita": "rosita",
+  "add-video": "Añadir Video",
+  "play": "Reproducir",
+  "pause": "Pausar",
+  "favorites": "Favoritos",
+  "search": "Buscar",
+  "del-pokemons": "Borrar Pokemónes",
+  "del-pokemon": "Quitar de Favoritos",
+  "add-pokemon": "Añadir a Favoritos",
+  "exit": "Salir"
+}

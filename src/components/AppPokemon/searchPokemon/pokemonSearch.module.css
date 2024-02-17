@@ -1,0 +1,177 @@
+.selectPokemon {
+  display: grid;
+  justify-items: center;
+  gap: 32px;
+  width: 251px;
+  height: 475px;
+}
+
+.selectName {
+  display: flex;
+  column-gap: 4px;
+}
+
+.selectName input {
+  border-block: revert;
+  border: 1px solid hsla(215, 25%, 27%, 1);
+  border-radius: 4px;
+  width: 180px;
+  height: 32px;
+}
+.selectName p {
+  size: 16px;
+  line-height: 24px;
+
+  color: hsla(0, 0%, 100%, 1);
+}
+.selectName button {
+  background: hsla(221, 91%, 60%, 1);
+  border-radius: 4px;
+  padding: 4px, 8px, 4px, 8px;
+  width: 67px;
+  height: 32px;
+}
+
+.containerPokemon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px;
+  gap: 16px;
+
+  width: 213px;
+  height: 328px;
+
+  border-radius: 16px;
+}
+.containerPokemon h1 {
+  font-family: var(--nunito);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  text-transform: capitalize;
+  text-align: center;
+}
+.containerPokemon p {
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 32px;
+
+  text-align: center;
+}
+
+.Pokemon {
+  display: flex;
+  justify-content: center;
+}
+
+.Pokemon img {
+  width: 140px;
+  height: 140px;
+}
+
+.type {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+
+  /* width: 110px;
+  height: 20px; */
+}
+
+
+
+.measures {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 24px;
+
+  width: 177px;
+  height: 48px;
+}
+
+.measure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+
+  width: 64px;
+  height: 48px;
+}
+
+.measure h2 {
+  width: 64px;
+  height: 16px;
+
+  align-items: center;
+  text-align: center;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #64748b;
+}
+
+.measureData {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 8px 0px;
+  gap: 8px;
+
+  width: 58px;
+  height: 32px;
+}
+
+.measureData img {
+  width: 16px;
+  height: 16px;
+}
+
+.measureData p {
+  width: 34px;
+  height: 16px;
+
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.AddFavorites {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 4px 8px;
+  gap: 0.5rem;
+  height: 32px;
+  border: 1px solid #3b76f6;
+  border-radius: 4px;
+}
+
+.AddFavorites img {
+ border-radius: 2px; 
+}
+
+.AddFavorites button{
+height: 24px;
+font-family: var(--nunito);
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 24px;
+text-align: center;
+    
+color: hsla(221, 91%, 60%, 1);
+    
+;
+}
