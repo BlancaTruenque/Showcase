@@ -13,7 +13,7 @@ const Welcome = () => {
 
   return (
     <>
-        <div className={styles.container}>
+        <div className={`${styles.container} my-10 max-w-screen-xl bg-white shadow-lg`}>
           <div className={styles.content}>
             <div className={styles.img}>
               <img
