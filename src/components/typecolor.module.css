@@ -1,0 +1,120 @@
+
+.type{
+    display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #ffffff;  
+  padding: 2px 8px;
+  border-radius: 10px;
+  height: 20px;
+  font-size: 0.8rem;
+  justify-content: center;
+}
+.Normal {
+  width: 58px;
+  background: #aaa67f;
+  color: #ffffff;
+}
+.Fighting {
+  background: #c12239;
+  width: 63px;
+  color: #ffffff;
+}
+
+.Flying {
+  width: 51px;
+  background: #a891ec;
+  color: #ffffff;
+}
+
+.Ground {
+  width: 58px;
+  background: #dec16b;
+  color: #ffffff;
+}
+.Poison {
+  width: 54px;
+  background: #a43e9e;
+  color: #ffffff;
+}
+
+.Rock {
+  width: 44px;
+  background: #b69e31;
+  color: #ffffff;
+}
+
+.Bug {
+  width: 39px;
+  background: #a7b723;
+  color: #ffffff;
+}
+.Ghost {
+  width: 50px;
+  background: #70559b;
+  color: #ffffff;
+}
+
+.Steel {
+  width: 45px;
+  background: #b7b9d0;
+  color: #ffffff;
+}
+
+.Fire {
+  width: 38px;
+  background: #f57d31;
+  color: #ffffff;
+}
+
+.Water {
+  width: 51px;
+  background: #6493eb;
+  color: #ffffff;
+}
+.Grass {
+  
+  width: 48px;
+  background: #74cb48;
+  color: #ffffff;
+}
+.Electric {
+  width: 58px;
+  background: #f9cf30;
+  color: #ffffff;
+}
+.Psychic {
+  
+  width: 57px;
+  background: #fb5584;
+  color: #ffffff;
+}
+.Ice {
+  
+  width: 32px;
+  background: #9ad6df;
+  color: #ffffff;
+}
+.Dragon {
+  
+  width: 58px;
+  background: #7037ff;
+  color: #ffffff;
+}
+
+.Dark{
+    
+padding: 2px 8px;
+
+width: 43px;
+background: #75574C;
+color: #ffffff;
+}
+.Fairy{
+   
+padding: 2px 8px;
+
+width: 44px;
+background: #E69EAC;
+color: #ffffff;
+}

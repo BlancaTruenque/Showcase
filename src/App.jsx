@@ -4,7 +4,6 @@ import MainApp from "./components/MainApp"
 import AppStateProvider from "./context/AppStateProvider"
 
 function App() {
-
   return (
     <>
       <AppStateProvider>
