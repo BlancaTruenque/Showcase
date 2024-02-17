@@ -16,7 +16,7 @@ function Header() {
                     React Showcase
                 </h1>
                 <h2 className="hidden md:block absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                    {currentApp !== "" && <p className="outline text-2xl text-[#1D58D8] font-medium px-3 py-1 rounded-full">
+                    {currentApp !== "" && <p className="outline text-lg text-[#1D58D8] font-bold px-3 py-1 rounded-full">
                         {appData.find(app => app.shortName === currentApp).name}
                     </p>}
                 </h2>
