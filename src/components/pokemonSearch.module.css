@@ -84,30 +84,12 @@ bottom: 0%; */
   padding: 0px;
   gap: 8px;
 
-  width: 110px;
-  height: 20px;
+  /* width: 110px;
+  height: 20px; */
 }
 
-.type button {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 2px 8px;
-  border-radius: 10px;
-  height: 20px;
-}
 
-.type button p {
-  /* width: 32px; */
-  font-family: sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 16px;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-}
+
 .measures {
   display: flex;
   flex-direction: row;
@@ -186,7 +168,7 @@ bottom: 0%; */
  border-radius: 2px; 
 }
 
-.AddFavorites p{
+.AddFavorites button{
     width: 123px;
 height: 24px;
 font-family: sans-serif;

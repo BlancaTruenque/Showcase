@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./pokemonSearch.module.css";
-
+import TypeColor from "./TypeColor";
 function PokemonSearch() {
   const [pokemon, setPokemon] = useState();
   const [name, setName] = useState("");
@@ -9,13 +9,7 @@ function PokemonSearch() {
     setName(event.target.value);
   }
 
-  function addClick() {
-    // const body = {
-    //   deleted: false,
-    // };
-
-    // const options =
-
+  function addPokemon() {
     fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
       .then((response) => response.json())
       .then((response) => {
@@ -34,14 +28,37 @@ function PokemonSearch() {
       .catch((err) => console.log(err));
   }
 
-  console.log(pokemon);
+  function addFavorites() {
+    const body = {
+      id: pokemon.id,
+      name: pokemon.name,
+      types: pokemon.types,
+      avatarUrl: pokemon.urlImg,
+    };
+    const options = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "User-Agent": "insomnia/2023.5.8",
+      },
+      body: JSON.stringify(body),
+    };
+
+    fetch(
+      `https://poke-collection-lite-production.up.railway.app/api/blancatest/favorites`,
+      options
+    )
+      .then((response) => response.json())
+      .then((response) => console.log(response))
+      .catch((err) => console.error(err));
+  }
 
   return (
     <>
       <div className={styles.selectPokemon}>
         <section className={styles.selectName}>
           <input onChange={addName} type="text" placeholder="bulbasaur" />
-          <button onClick={addClick}>
+          <button onClick={addPokemon}>
             <p>Search</p>
           </button>
         </section>
@@ -57,18 +74,8 @@ function PokemonSearch() {
               </div>
               <div className={styles.type}>
                 {pokemon.types.map((item) => {
-                  return (
-                    <button className="bg-[#A43E9E] w-16">
-                      <p>{item}</p>
-                    </button>
-                  );
+                  return <TypeColor type={item} />;
                 })}
-                {/* <button className="bg-[#A43E9E] w-16">
-                  <p>Poison</p>
-                </button>
-                <button className="bg-[#74CB48] w-12">
-                  <p>Grass</p>
-                </button> */}
               </div>
               <div className={styles.measures}>
                 <div className={styles.measure}>
@@ -89,7 +96,7 @@ function PokemonSearch() {
             </section>
             <section className={styles.AddFavorites}>
               <img src="/src/assets/icons/vector.svg" alt="vector" />
-              <p>Add to Favorites</p>
+              <button onClick={addFavorites}>Add to Favorites</button>
             </section>
           </>
         )}

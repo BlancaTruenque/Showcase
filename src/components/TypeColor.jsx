@@ -1,29 +1,67 @@
 import styles from "./typecolor.module.css";
 
-function TypeColor() {
+function TypeColor({ type }) {
   return (
     <>
       <ul>
-        <li className={styles.normal}>Normal</li>
-        <li className={styles.Fighting}>Fighting</li>
-        <li className={styles.Flying}>Flying</li>
-        <li className={styles.Ground}>Ground</li>
-        <li className={styles.Poison}>Poison</li>
-        <li className={styles.Rock}>Rock</li>
-        <li className={styles.Bug}>Bug</li>
-        <li className={styles.Ghost}>Ghost</li>
-        <li className={styles.Steel}>Steel</li>
-        <li className={styles.Fire}>Fire</li>
-        <li className={styles.Water}>Water</li>
-        <li className={styles.Grass}>Grass</li>
-        <li className={styles.Electric}>Electric</li>
-        <li className={styles.Psychic}>Psychic</li>
-        <li className={styles.Ice}>Ice</li>
-        <li className={styles.Dragon}>Dragon</li>
-        <li className={styles.Dark}>Dark</li>
-        <li className={styles.Fairy}>Fairy</li>
+        {type === "normal" && (
+          <li className={`${styles.Normal} ${styles.type}`}>Normal</li>
+        )}
+        {type === "fighting" && (
+          <li className={`${styles.Fighting} ${styles.type}`}>Fighting</li>
+        )}
+        {type === "flying" && (
+          <li className={`${styles.Flying} ${styles.type}`}>Flying</li>
+        )}
+        {type === "ground" && (
+          <li className={`${styles.Ground} ${styles.type}`}>Ground</li>
+        )}
+        {type === "poison" && (
+          <li className={`${styles.Poison} ${styles.type}`}>Poison</li>
+        )}
+        {type === "rock" && (
+          <li className={`${styles.Rock} ${styles.type}`}>Rock</li>
+        )}
+        {type === "bug" && (
+          <li className={`${styles.Bug} ${styles.type}`}>Bug</li>
+        )}
+        {type === "ghost" && (
+          <li className={`${styles.Ghost} ${styles.type}`}>Ghost</li>
+        )}
+        {type === "steel" && (
+          <li className={`${styles.Steel} ${styles.type}`}>Steel</li>
+        )}
+        {type === "fire" && (
+          <li className={`${styles.Fire} ${styles.type}`}>Fire</li>
+        )}
+        {type === "water" && (
+          <li className={`${styles.Water} ${styles.type}`}>Water</li>
+        )}
+        {type === "grass" && (
+          <li className={`${styles.Grass} ${styles.type}`}>Grass</li>
+        )}
+        {type === "electric" && (
+          <li className={`${styles.Electric} ${styles.type}`}>Electric</li>
+        )}
+        {type === "psychic" && (
+          <li className={`${styles.Psychic} ${styles.type}`}>Psychic</li>
+        )}
+        {type === "ice" && (
+          <li className={`${styles.Ice} ${styles.type}`}>Ice</li>
+        )}
+        {type === "dragon" && (
+          <li className={`${styles.Dragon} ${styles.type}`}>Dragon</li>
+        )}
+        {type === "dark" && (
+          <li className={`${styles.Dark} ${styles.type}`}>Dark</li>
+        )}
+        {type === "fairy" && (
+          <li className={`${styles.Fairy} ${styles.type}`}>Fairy</li>
+        )}
       </ul>
     </>
   );
 }
 export default TypeColor;
+
+
