@@ -5,10 +5,19 @@ import Welcome from "../welcomePokemon/Welcome";
 import { useContext } from "react";
 
 const ContenedorPokemon = () => {
-  const {isActive } = useContext(AppPokeContext);
+  const { isActive } = useContext(AppPokeContext);
 
 
-  return <>{isActive ? <div> <PokemonSearch /> <Favorites /> </div> : <Welcome />}</>;
+  return <>
+
+    {isActive ?
+      <div className="flex justify-center flex-wrap md:flex-nowrap lg:w-[calc(80vw)] px-4 mx-auto mt-10">
+        <PokemonSearch />
+        <Favorites />
+      </div>
+      :
+      <Welcome />}
+  </>
 };
 
 export default ContenedorPokemon;

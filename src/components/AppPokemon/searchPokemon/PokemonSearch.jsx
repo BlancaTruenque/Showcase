@@ -2,12 +2,13 @@ import { useContext, useState } from "react";
 import styles from "./pokemonSearch.module.css";
 import TypeColor from "../typeColor/TypeColor";
 import { AppPokeContext } from "../../../context/AppPokemonProvider";
+import { I18nContext } from "../../../context/i18nProvider";
 
 function PokemonSearch() {
   const [pokemon, setPokemon] = useState();
   const [name, setName] = useState("");
-  const { currentUsername, resetData, favoritePoke } =
-    useContext(AppPokeContext);
+  const { currentUsername, resetData, favoritePoke } = useContext(AppPokeContext);
+  const {t} = useContext(I18nContext)
 
   function addName(event) {
     setName(event.target.value);
@@ -75,7 +76,7 @@ function PokemonSearch() {
         <section className={styles.selectName}>
           <input onChange={addName} type="text" placeholder="bulbasaur" />
           <button onClick={addPokemon}>
-            <p>Search</p>
+            <p>{t("search")}</p>
           </button>
         </section>
         {pokemon && (
@@ -113,12 +114,12 @@ function PokemonSearch() {
             {favoritePoke.find((poke) => poke.id === pokemon.id) ? (
               <section className={styles.AddFavorites}>
                 <img src="/src/assets/icons/vector.svg" alt="vector" />
-                <button onClick={deleteFavorites}>Remove From Favorite</button>
+                <button onClick={deleteFavorites}>{t("del-pokemon")}</button>
               </section>
             ) : (
               <section className={styles.AddFavorites}>
                 <img src="/src/assets/icons/vector.svg" alt="vector" />
-                <button onClick={addFavorites}>Add to Favorites</button>
+                <button onClick={addFavorites}>{t("add-pokemon")}</button>
               </section>
             )}
           </>

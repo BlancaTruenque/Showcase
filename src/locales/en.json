@@ -10,5 +10,11 @@
   "rosita": "rouse",
   "add-video": "Add Video",
   "play": "Play",
-  "pause": "Pause"
+  "pause": "Pause",
+  "favorites": "Favorites",
+  "search": "Search",
+  "del-pokemons": "Delete Pokemons",
+  "del-pokemon": "Remove From Favorite",
+  "add-pokemon": "Add to Favorites",
+  "exit": "Exit" 
 }

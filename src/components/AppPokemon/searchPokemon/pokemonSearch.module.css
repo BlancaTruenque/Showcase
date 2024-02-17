@@ -3,7 +3,7 @@
   justify-items: center;
   gap: 32px;
   width: 251px;
-  height: 430px;
+  height: 475px;
 }
 
 .selectName {
@@ -62,11 +62,6 @@
 }
 
 .Pokemon {
-  /* position: absolute; */
-  /* left: 0%;
-right: 0%;
-top: 0%;
-bottom: 0%; */
   display: flex;
   justify-content: center;
 }
@@ -157,8 +152,7 @@ bottom: 0%; */
   flex-direction: row;
   align-items: center;
   padding: 4px 8px;
-  gap: 4px;
-  width: 167px;
+  gap: 0.5rem;
   height: 32px;
   border: 1px solid #3b76f6;
   border-radius: 4px;
@@ -169,7 +163,6 @@ bottom: 0%; */
 }
 
 .AddFavorites button{
-    width: 123px;
 height: 24px;
 font-family: sans-serif;
 font-style: normal;

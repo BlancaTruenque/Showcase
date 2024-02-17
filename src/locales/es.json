@@ -10,5 +10,11 @@
   "rosita": "rosita",
   "add-video": "Añadir Video",
   "play": "Reproducir",
-  "pause": "Pausar"
+  "pause": "Pausar",
+  "favorites": "Favoritos",
+  "search": "Buscar",
+  "del-pokemons": "Borrar Pokemónes",
+  "del-pokemon": "Quitar de Favoritos",
+  "add-pokemon": "Añadir a Favoritos",
+  "exit": "Salir"
 }
